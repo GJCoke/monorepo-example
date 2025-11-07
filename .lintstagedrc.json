@@ -1,0 +1,7 @@
+{
+  "*.{ts,tsx,js,jsx,vue,md}": [
+    "eslint",
+    "prettier --write"
+  ],
+  "*.{js,ts,mjs,cjs,json,jsx,tsx,css,less,scss,vue,html,md}": ["cspell lint"]
+}
