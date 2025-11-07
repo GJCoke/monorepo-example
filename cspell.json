@@ -1,18 +1,7 @@
 {
   "import": ["@cspell/dict-typescript/cspell-ext.json"],
   "caseSensitive": false,
-  "words": [
-    "mi",
-    "pnpm",
-    "vite",
-    "monorepo",
-    "eslint",
-    "prettier",
-    "commitlint",
-    "tsx",
-    "tsconfig",
-    "unocss"
-  ],
+  "words": ["mi", "pnpm", "vite", "monorepo", "eslint", "prettier", "commitlint", "tsx", "tsconfig", "unocss"],
 
   "ignorePaths": [
     "**/node_modules/**",
@@ -30,16 +19,11 @@
     "*.jpg"
   ],
 
-  "ignoreRegExpList": [
-    "/http(s)?:\\/\\//",
-    "/#[A-Za-z0-9]{6}/"
-  ],
+  "ignoreRegExpList": ["/http(s)?:\\/\\//", "/#[A-Za-z0-9]{6}/"],
 
   "allowCompoundWords": true,
 
-  "dictionaries": [
-    "custom-dictionary"
-  ],
+  "dictionaries": ["custom-dictionary"],
   "dictionaryDefinitions": [
     {
       "name": "custom-dictionary",
