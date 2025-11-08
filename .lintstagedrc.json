@@ -1,4 +1,4 @@
 {
-  "*.{ts,tsx,js,jsx,vue,md}": ["eslint", "prettier --write"],
-  "*.{js,ts,mjs,cjs,json,jsx,tsx,css,less,scss,vue,html,md}": ["cspell lint"]
+  "*.{ts,tsx,js,jsx,vue,md}": ["pnpm lint:prettier", "pnpm lint:eslint"],
+  "*.{js,ts,mjs,cjs,json,jsx,tsx,css,less,scss,vue,html,md}": ["pnpm lint:spellcheck"]
 }

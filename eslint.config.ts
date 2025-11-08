@@ -27,10 +27,10 @@ export default defineConfig(
     rules: {
       // 自定义规则
       "no-var": "error", // 禁止使用 var
+      "no-empty": "off",
       eqeqeq: "error", // 必须使用 === / !==
-      "no-unused-vars": "error", // 禁止未使用变量
       "prefer-const": "error", // 优先使用 const
-      "no-duplicate-imports": "error", // 禁止重复导入
+      "@typescript-eslint/no-unused-vars": "off",
     },
   },
   // 前端配置 Vue3

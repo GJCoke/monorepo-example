@@ -22,10 +22,10 @@ const Configuration: UserConfig = {
   },
   prompt: {
     types: [
-      { value: "build", name: "构建: 构建系统或外部依赖的修改（例如 npm、webpack、docker 等）" },
-      { value: "chore", name: "杂项: 其他不修改 src 或 test 的日常事务（如修改配置文件、脚本等）" },
-      { value: "ci", name: "持续集成: 修改 CI 配置文件和脚本（如 GitHub Actions、Jenkins 等）" },
-      { value: "docs", name: "文档: 仅文档相关的修改（README、CHANGELOG、doc 文件等）" },
+      { value: "build", name: "构建: 构建系统或外部依赖的修改(例如 npm、webpack、docker 等)" },
+      { value: "chore", name: "杂项: 其他不修改 src 或 test 的日常事务(如修改配置文件、脚本等)" },
+      { value: "ci", name: "持续集成: 修改 CI 配置文件和脚本(如 GitHub Actions、Jenkins 等)" },
+      { value: "docs", name: "文档: 仅文档相关的修改(README、CHANGELOG、doc 文件等)" },
       { value: "feat", name: "新功能: 新增功能或特性" },
       { value: "fix", name: "修复: 修复 bug" },
       { value: "perf", name: "性能优化: 提升性能相关的修改" },

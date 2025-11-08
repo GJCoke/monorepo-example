@@ -1,0 +1,25 @@
+{
+  "name": "@monorepo-example/components",
+  "version": "1.0.1",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.20.0",
+  "buildOptions": {
+    "type": "ts",
+    "name": "MonorepoExampleComponents",
+    "formats": [
+      "esm",
+      "cjs",
+      "iife"
+    ]
+  },
+  "files": [
+    "dist"
+  ]
+}

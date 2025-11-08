@@ -1,0 +1,29 @@
+{
+  "name": "@monorepo-example/utils",
+  "version": "1.0.1",
+  "description": "",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.20.0",
+  "buildOptions": {
+    "type": "ts",
+    "name": "MonorepoExampleComponents",
+    "formats": [
+      "esm",
+      "cjs",
+      "iife"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "nanoid": "^5.1.6"
+  }
+}
