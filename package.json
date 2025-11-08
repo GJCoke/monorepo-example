@@ -19,7 +19,7 @@
     }
   },
   "keywords": [],
-  "author": "Coke",
+  "author": "Coke <jock74608@gmail.com>",
   "license": "ISC",
   "packageManager": "pnpm@10.20.0",
   "engines": {

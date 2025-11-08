@@ -6,7 +6,6 @@ import { type UserConfig } from "cz-git"
  */
 const Configuration: UserConfig = {
   extends: ["@commitlint/config-conventional"],
-  parserPreset: "conventional-changelog-atom",
   formatter: "@commitlint/format",
   rules: {
     "type-enum": [
@@ -33,7 +32,7 @@ const Configuration: UserConfig = {
       { value: "refactor", name: "重构: 代码重构，既不新增功能也不修复 bug" },
       { value: "revert", name: "回滚: 撤销之前的提交" },
       { value: "style", name: "格式: 仅修改空格、格式缩进、分号等，不影响代码逻辑" },
-      { value: "test", name: "测试: 添加、修改或修复测试用例" }
+      { value: "test", name: "测试: 添加、修改或修复测试用例" },
     ],
     scopes: ["root", "backend", "web", "electron", "website", "internal", "components", "utils"],
     allowCustomScopes: true,
@@ -45,7 +44,7 @@ const Configuration: UserConfig = {
       body: "请详细描述更新:",
       footer: "请添加相关 ISSUES、BREAKING CHANGE 等相关链接(可选):",
       confirmCommit: "请确认是否提交？",
-    }
+    },
   },
 }
 
