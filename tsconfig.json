@@ -3,7 +3,6 @@
     "target": "ES2020", // 编译输出目标
     "module": "ESNext", // 使用 ES 模块
     "moduleResolution": "Node", // Node 风格模块解析
-    "lib": [],
     "jsx": "preserve", // Vue JSX 支持
     "esModuleInterop": true, // CommonJS 模块兼容
     "allowSyntheticDefaultImports": true, // 支持默认导入
@@ -19,11 +18,11 @@
       // monorepo workspace 支持
       "@shared/*": ["libs/ts-shared/*"]
     },
-    "types": [],
     "incremental": true, // 启用增量编译
     "sourceMap": true, // 支持 sourceMap
     "outDir": "dist" // 编译输出目录
   },
-  "include": ["apps/**/*", "libs/**/*", "types/**/*.d.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": [],
+  "exclude": ["node_modules", "dist"],
+  "references": [{ "path": "apps/web" }, { "path": "apps/electron" }]
 }
