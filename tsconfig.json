@@ -1,13 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2020", // 编译输出目标
+    "target": "ESNext", // 编译输出目标
     "module": "ESNext", // 使用 ES 模块
-    "moduleResolution": "Node", // Node 风格模块解析
-    "jsx": "preserve", // Vue JSX 支持
+    "moduleResolution": "bundler", // Node 风格模块解析
     "esModuleInterop": true, // CommonJS 模块兼容
     "allowSyntheticDefaultImports": true, // 支持默认导入
     "strict": true, // 开启严格模式
-    "noImplicitAny": true, // 不允许隐式 any
     "noImplicitReturns": true,
     "declaration": true, // 声明文件生成
     "noFallthroughCasesInSwitch": true,
@@ -19,7 +17,6 @@
     "sourceMap": true, // 支持 sourceMap
     "outDir": "dist" // 编译输出目录
   },
-  "include": [],
-  "exclude": ["node_modules", "dist"],
-  "references": [{ "path": "apps/web" }, { "path": "apps/electron" }]
+  "include": ["packages/**/*", "apps/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

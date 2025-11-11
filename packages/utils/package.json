@@ -13,7 +13,7 @@
   "packageManager": "pnpm@10.20.0",
   "buildOptions": {
     "type": "ts",
-    "name": "MonorepoExampleComponents",
+    "name": "MonorepoExampleUtils",
     "formats": [
       "esm",
       "cjs",

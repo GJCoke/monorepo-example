@@ -11,6 +11,7 @@
     "lint:spellcheck": "cspell lint \"(packages|apps)/**/*.{js,ts,mjs,cjs,json,css,less,scss,vue,html,md}\"",
     "lint:typecheck": "tsc --build --noEmit",
     "lint:commit": "commitlint --edit $1",
+    "lint:depcheck": "depcheck",
     "commit": "git-cz",
     "prepare": "husky",
     "precommit": "lint-staged",
@@ -57,6 +58,7 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3",
-    "vue": "^3.5.24"
+    "vue": "^3.5.24",
+    "vue-eslint-parser": "^10.2.0"
   }
 }

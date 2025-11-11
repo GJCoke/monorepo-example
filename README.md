@@ -46,3 +46,57 @@ docs/
 4. 使用 pnpm eslint 进行代码静态检查
 5. 使用 lint:spellcheck 进行拼写检查
 6. 使用 lint:typecheck 进行ts编译检查
+
+# Workspace
+
+如果需要依赖内部 package 中的包，需要使用包名的方式
+
+```json
+{
+  "dependencies": {
+    "@monorepo-example/utils": "workspace:*"
+  }
+}
+```
+
+pnpm 支持 monorepo 安装子包, 只需要在 pnpm-workspace 中添加子包的路径, 即可自动安装子包依赖
+
+tsconfig.json 的继承规则
+
+- 子配置中存在的键 → 覆盖父配置的键
+- 子配置中不存在的键 → 继承父配置的值
+- 数组类型（如 include、exclude、files） → 不合并，完全覆盖
+- references → 合并行为依赖 TypeScript 版本，一般是追加
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "strict": true,
+    "noImplicitReturns": true
+  },
+  "exclude": ["node_modules"]
+}
+```
+
+然后在子项目里写：
+
+```json
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "CommonJS"
+  }
+}
+```
+
+结果：
+
+- module 被子配置覆盖 → "CommonJS"
+- target 继承自根配置 → "ES2020"
+- strict、noImplicitReturns 也继承自根配置 → true
+- exclude 也继承 → ["node_modules"]
+
+运行指定项目
+pnpm --filter apps/web dev

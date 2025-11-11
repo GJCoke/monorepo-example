@@ -5,8 +5,9 @@ import eslintPluginPrettier from "eslint-plugin-prettier"
 import eslintPluginVue from "eslint-plugin-vue"
 import globals from "globals"
 import eslintConfigPrettier from "eslint-config-prettier/flat"
+import vueParser from "vue-eslint-parser"
 
-const ignores = ["**/dist/**", "**node_modules/**", ".*", "scripts/**", "**/*.d.ts", "**/.venv/**", "*.log"]
+const ignores = ["**/dist/**", "**node_modules/**", ".*", "scripts/**", "**/*.d.ts", "**/.venv/**", "*.log", "*.md"]
 
 /**
  * @see https://eslint.org/docs/latest/use/configure/configuration-files
@@ -39,6 +40,10 @@ export default defineConfig(
     files: ["apps/web/**/*.{ts,js,tsx,jsx,vue}", "packages/components/**/*.{ts,js,tsx,jsx,vue}"], // 应用范围
     extends: [...eslintPluginVue.configs["flat/recommended"], eslintConfigPrettier], // 继承规则
     languageOptions: {
+      parser: vueParser,
+      parserOptions: {
+        parser: tsESLint.parser,
+      },
       globals: {
         ...globals.browser, // 添加浏览器全局变量
       },

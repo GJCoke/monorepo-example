@@ -1,4 +1,3 @@
-// build/rollup.config.generator.js
 import path from "node:path"
 import URL from "node:url"
 import fs from "node:fs"
@@ -12,7 +11,7 @@ const __filename = URL.fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // 要打包的 packages
-const packages = ["utils", "axios", "components"]
+const packages = ["utils", "axios"]
 
 // 获取包根路径
 function getPackageRoots() {

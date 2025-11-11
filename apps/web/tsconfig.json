@@ -1,9 +1,17 @@
 {
+  "files": [],
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "types": [],
-    "lib": ["ESNext", "DOM"]
+    "lib": ["ESNext", "DOM"],
+    "types": ["vite/client", "node"],
+    "jsx": "preserve", // Vue JSX 支持
+    "jsxImportSource": "vue",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts", "src/**/*.vue", "typings/**/*.d.ts"]
 }
