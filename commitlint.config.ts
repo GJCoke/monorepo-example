@@ -34,7 +34,7 @@ const Configuration: UserConfig = {
       { value: "style", name: "格式: 仅修改空格、格式缩进、分号等，不影响代码逻辑" },
       { value: "test", name: "测试: 添加、修改或修复测试用例" },
     ],
-    scopes: ["root", "backend", "web", "electron", "website", "internal", "components", "utils"],
+    scopes: ["root", "backend", "web", "desktop", "website", "internal", "components", "utils"],
     allowCustomScopes: true,
     skipQuestions: ["breaking"],
     messages: {

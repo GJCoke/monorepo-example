@@ -15,8 +15,8 @@
     "commit": "git-cz",
     "prepare": "husky",
     "precommit": "lint-staged",
-    "build": "node ./scripts/build.js",
-    "dev:web": "pnpm -F web dev"
+    "dev:web": "turbo watch dev --filter @monorepo-example/web",
+    "dev:desktop": "turbo watch dev --filter @monorepo-example/desktop"
   },
   "config": {
     "commitizen": {
@@ -37,9 +37,6 @@
     "@commitlint/config-conventional": "^20.0.0",
     "@commitlint/types": "^20.0.0",
     "@eslint/js": "^9.39.1",
-    "@rollup/plugin-commonjs": "^29.0.0",
-    "@rollup/plugin-node-resolve": "^16.0.3",
-    "@rollup/plugin-terser": "^0.4.4",
     "@types/node": "^24.10.0",
     "@vitejs/plugin-vue": "^6.0.1",
     "commitizen": "^4.3.1",
@@ -54,9 +51,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
-    "rollup": "^4.53.1",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-node": "^10.9.2",
+    "turbo": "^2.6.1",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3",
     "vue": "^3.5.24",

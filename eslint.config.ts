@@ -52,7 +52,7 @@ export default defineConfig(
   // 后端配置 electron node
   {
     ignores, // 忽略目录
-    files: ["apps/electron/**/*.{ts,js}"], // 应用范围
+    files: ["apps/desktop/**/*.{ts,js}"], // 应用范围
     languageOptions: {
       globals: {
         ...globals.node, // 添加 node 全局变量

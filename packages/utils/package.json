@@ -5,7 +5,8 @@
   "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node ../builder/cli.ts --dev",
+    "build": "ts-node ../builder/cli.ts"
   },
   "keywords": [],
   "author": "",

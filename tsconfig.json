@@ -4,7 +4,6 @@
     "module": "ESNext", // 使用 ES 模块
     "moduleResolution": "bundler", // Node 风格模块解析
     "esModuleInterop": true, // CommonJS 模块兼容
-    "allowSyntheticDefaultImports": true, // 支持默认导入
     "strict": true, // 开启严格模式
     "noImplicitReturns": true,
     "declaration": true, // 声明文件生成

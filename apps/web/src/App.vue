@@ -3,7 +3,6 @@
   import { nanoid } from "@monorepo-example/utils"
 
   console.log(nanoid.name, "nanoid")
-  // console.log(window.electron, "window.electron")
 </script>
 
 <template>
