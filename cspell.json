@@ -5,6 +5,7 @@
 
   "ignorePaths": [
     "**/node_modules/**",
+    "**/release/**",
     "**/dist/**",
     "**/build/**",
     "**/coverage/**",
