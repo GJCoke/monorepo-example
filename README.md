@@ -100,3 +100,45 @@ tsconfig.json 的继承规则
 
 运行指定项目
 pnpm --filter apps/web dev
+
+## Changeset
+
+当你修改了某个包或功能后，创建一个 changeset
+`pnpm changeset`
+
+每次运行 pnpm changeset 创建的变更文件 (.md) 会包含：
+
+影响的 package
+
+变更类型：
+
+major → 大版本，可能包含破坏性变更
+
+minor → 小版本，添加功能，但向下兼容
+
+patch → 补丁，修复 bug，向下兼容
+
+例如 .changeset/my-change.md 内容：
+
+```yaml
+---
+"my-package": patch
+---
+Fixed a bug in my-package
+```
+
+patch → 发布 patch
+minor → 发布 minor
+major → 发布 major
+
+发布时如何决定版本号
+
+当你运行：
+
+`pnpm changeset version`
+
+Changesets 会读取所有未发布的 .changeset 文件
+
+根据其中标记的 major / minor / patch 决定下一个版本
+
+支持多个 package 的 monorepo，自动计算每个 package 的下一个版本
