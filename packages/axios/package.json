@@ -2,6 +2,7 @@
   "name": "@monorepo-example/axios",
   "version": "1.0.1",
   "description": "",
+  "type": "module",
   "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
   "scripts": {
