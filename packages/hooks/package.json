@@ -27,5 +27,8 @@
   "dependencies": {
     "@monorepo-example/axios": "workspace:*",
     "@monorepo-example/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@vueuse/core": "^14.0.0"
   }
 }

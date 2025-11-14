@@ -323,6 +323,10 @@ importers:
       '@monorepo-example/utils':
         specifier: workspace:*
         version: link:../utils
+    devDependencies:
+      '@vueuse/core':
+        specifier: ^14.0.0
+        version: 14.0.0(vue@3.5.24(typescript@5.9.3))
 
   packages/utils:
     dependencies:
