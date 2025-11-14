@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed, ref, watch } from "vue"
   import { useRoute } from "vue-router"
-  import { SimpleScrollbar } from "@monorepo-example/materials"
+  import { SimpleScrollbar } from "@/materials"
   import { useBoolean } from "@monorepo-example/hooks"
   import type { RouteKey } from "@elegant-router/types"
   import { GLOBAL_SIDER_MENU_ID } from "@/constants/app"

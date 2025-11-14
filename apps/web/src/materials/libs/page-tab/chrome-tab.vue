@@ -1,13 +1,15 @@
 <script setup lang="ts">
   import type { PageTabProps } from "../../types"
+  import ChromeTabBg from "./chrome-tab-bg.vue"
   import style from "./index.module.css"
 
   defineOptions({
-    name: "ButtonTab",
+    name: "ChromeTab",
   })
 
   defineProps<PageTabProps>()
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   type SlotFn = (props?: Record<string, unknown>) => any
 
   type Slots = {
@@ -36,17 +38,21 @@
 
 <template>
   <div
-    class=":soy: relative inline-flex cursor-pointer items-center justify-center gap-12px whitespace-nowrap border-(1px solid) rounded-4px px-12px py-4px"
+    class=":soy: relative inline-flex cursor-pointer items-center justify-center gap-16px whitespace-nowrap px-24px py-6px -mr-18px"
     :class="[
-      style['button-tab'],
-      { [style['button-tab_dark']]: darkMode },
-      { [style['button-tab_active']]: active },
-      { [style['button-tab_active_dark']]: active && darkMode },
+      style['chrome-tab'],
+      { [style['chrome-tab_dark']]: darkMode },
+      { [style['chrome-tab_active']]: active },
+      { [style['chrome-tab_active_dark']]: active && darkMode },
     ]"
   >
+    <div class=":soy: pointer-events-none absolute left-0 top-0 h-full w-full -z-1" :class="[style['chrome-tab__bg']]">
+      <ChromeTabBg />
+    </div>
     <slot name="prefix"></slot>
     <slot></slot>
     <slot name="suffix"></slot>
+    <div class=":soy: absolute right-7px h-16px w-1px bg-#1f2225" :class="[style['chrome-tab-divider']]"></div>
   </div>
 </template>
 

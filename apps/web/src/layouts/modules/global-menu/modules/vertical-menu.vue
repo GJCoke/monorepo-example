@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed, ref, watch } from "vue"
   import { useRoute } from "vue-router"
-  import { SimpleScrollbar } from "@monorepo-example/materials"
+  import { SimpleScrollbar } from "@/materials"
   import { GLOBAL_SIDER_MENU_ID } from "@/constants/app"
   import { useAppStore } from "@/store/modules/app"
   import { useThemeStore } from "@/store/modules/theme"

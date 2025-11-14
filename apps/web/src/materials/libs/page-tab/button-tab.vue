@@ -3,11 +3,12 @@
   import style from "./index.module.css"
 
   defineOptions({
-    name: "SliderTab",
+    name: "ButtonTab",
   })
 
   defineProps<PageTabProps>()
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   type SlotFn = (props?: Record<string, unknown>) => any
 
   type Slots = {
@@ -36,12 +37,12 @@
 
 <template>
   <div
-    class=":soy: relative inline-flex cursor-pointer items-center justify-center gap-6px whitespace-nowrap px-12px py-4px"
+    class=":soy: relative inline-flex cursor-pointer items-center justify-center gap-12px whitespace-nowrap border-(1px solid) rounded-4px px-12px py-4px"
     :class="[
-      style['slider-tab'],
-      { [style['slider-tab_dark']]: darkMode },
-      { [style['slider-tab_active']]: active },
-      { [style['slider-tab_active_dark']]: active && darkMode },
+      style['button-tab'],
+      { [style['button-tab_dark']]: darkMode },
+      { [style['button-tab_active']]: active },
+      { [style['button-tab_active_dark']]: active && darkMode },
     ]"
   >
     <slot name="prefix"></slot>

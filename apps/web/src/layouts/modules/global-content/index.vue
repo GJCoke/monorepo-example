@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { computed } from "vue"
-  import { LAYOUT_SCROLL_EL_ID } from "@monorepo-example/materials"
+  import { LAYOUT_SCROLL_EL_ID } from "@/materials"
   import { useAppStore } from "@/store/modules/app"
   import { useThemeStore } from "@/store/modules/theme"
   import { useRouteStore } from "@/store/modules/route"

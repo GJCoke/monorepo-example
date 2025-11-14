@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed } from "vue"
   import { createReusableTemplate } from "@vueuse/core"
-  import { SimpleScrollbar } from "@monorepo-example/materials"
+  import { SimpleScrollbar } from "@/materials"
   import { transformColorWithOpacity } from "@monorepo-example/color"
   import type { RouteKey } from "@elegant-router/types"
 

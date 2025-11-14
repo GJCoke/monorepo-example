@@ -37,7 +37,7 @@ declare namespace UnionKey {
    * - wrapper: the wrapper component's root element overflow
    * - content: the content component overflow
    */
-  type ThemeScrollMode = import("@monorepo-example/materials").LayoutScrollMode
+  type ThemeScrollMode = import("@/materials").LayoutScrollMode
 
   /** Page animate mode */
   type ThemePageAnimateMode = "fade" | "fade-slide" | "fade-bottom" | "fade-scale" | "zoom-fade" | "zoom-out" | "none"
@@ -48,7 +48,7 @@ declare namespace UnionKey {
    * - chrome: chrome style
    * - button: button style
    */
-  type ThemeTabMode = import("@monorepo-example/materials").PageTabMode
+  type ThemeTabMode = import("@/materials").PageTabMode
 
   /** Unocss animate key */
   type UnoCssAnimateKey =
