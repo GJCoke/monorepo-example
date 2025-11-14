@@ -35,6 +35,6 @@ export class AppMain {
     })
 
     // 加载你的页面（HTML 或者 build 出来的前端）
-    this.mainWindow.loadURL("http://localhost:5173")
+    this.mainWindow.loadURL("http://localhost:9527")
   }
 }
