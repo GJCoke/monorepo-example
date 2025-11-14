@@ -88,8 +88,6 @@ export async function createRollupConfig({
   const { name, formats = ["cjs", "esm"], type = "ts" } = pkgJson.buildOptions || {}
   const output: OutputOptions[] = []
 
-  console.log(type, "this is types")
-
   for (const format of formats) {
     const outputItem: OutputOptions = {
       format,
@@ -112,7 +110,7 @@ export async function createRollupConfig({
     input,
     output,
     plugins: getPlugins(root, type),
-    external: getExternal(pkgJson),
+    external: [...getExternal(pkgJson), "vue", "react"],
     watch: {
       include: path.resolve(root, "src/**"),
       exclude: path.resolve(root, "node_modules/**"),

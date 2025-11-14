@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "",
   "module": "./dist/index.esm.js",
+  "type": "module",
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "ts-node ../builder/cli.ts --dev",

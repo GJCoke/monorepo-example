@@ -17,7 +17,8 @@
     "type": "vue",
     "name": "MonorepoExampleMaterials",
     "formats": [
-      "esm"
+      "esm",
+      "cjs"
     ]
   },
   "files": [

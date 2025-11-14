@@ -33,7 +33,6 @@ async function main() {
           console.error("Rollup build error:", event.error)
           break
         default:
-          console.log(event)
           break
       }
     })
