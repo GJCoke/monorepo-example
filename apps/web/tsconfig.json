@@ -3,15 +3,23 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "lib": ["ESNext", "DOM"],
-    "types": ["vite/client", "node"],
+    "types": ["vite/client", "node", "unplugin-icons/types/vue", "naive-ui/volar"],
     "jsx": "preserve", // Vue JSX 支持
     "jsxImportSource": "vue",
+    "baseUrl": ".",
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "noUnusedLocals": false,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
     "paths": {
       "@/*": ["./src/*"],
       "~/*": ["./*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.vue", "typings/**/*.d.ts"]
+  "exclude": ["node_modules", "dist"],
+  "include": ["./**/*.ts", "./**/*.vue", "./**/*.d.ts"]
 }

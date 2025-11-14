@@ -139,3 +139,14 @@ INDEXEDDB
 nsis
 vueuse
 Iconify
+sider
+Uncapitalize
+MEDZ
+Yanbowe
+Azir
+Yanbowe
+unplugin
+defu
+ntal
+kolorist
+onfig

@@ -6,19 +6,18 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "ts-node ../builder/cli.ts --dev",
-    "build": "ts-node ../builder/cli.ts"
+    "build": "ts-node ../builder/cli.ts",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.20.0",
   "buildOptions": {
-    "type": "ts",
+    "type": "vue",
     "name": "MonorepoExampleHooks",
     "formats": [
-      "esm",
-      "cjs",
-      "iife"
+      "esm"
     ]
   },
   "files": [

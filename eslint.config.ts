@@ -56,7 +56,18 @@ export default defineConfig(
       },
       globals: {
         ...globals.browser, // 添加浏览器全局变量
+        NaiveUI: "readonly",
+        App: "readonly",
+        UnionKey: "readonly",
       },
+    },
+    rules: {
+      "vue/multi-word-component-names": [
+        "warn",
+        {
+          ignores: ["index", "App", "Register", "[id]", "[url]"],
+        },
+      ],
     },
   },
   // 后端配置 electron node

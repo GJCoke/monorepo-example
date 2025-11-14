@@ -6,7 +6,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "ts-node ../builder/cli.ts --dev",
-    "build": "ts-node ../builder/cli.ts"
+    "build": "ts-node ../builder/cli.ts",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",

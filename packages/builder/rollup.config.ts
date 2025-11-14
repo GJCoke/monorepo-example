@@ -1,6 +1,7 @@
 import path from "path"
 import { nodeResolve } from "@rollup/plugin-node-resolve"
 import commonjs from "@rollup/plugin-commonjs"
+import terser from "@rollup/plugin-terser"
 import typescript from "rollup-plugin-typescript2"
 import postcss from "rollup-plugin-postcss"
 import fs from "node:fs"
@@ -50,24 +51,16 @@ function getExternal(pkgJson: PackageJson): string[] {
  */
 function getPlugins(root: string, type: "ts" | "vue" = "ts"): Plugin[] {
   const tsconfig = path.resolve(root, "tsconfig.json")
-  const plugins: Plugin[] = [nodeResolve(), commonjs(), typescript({ tsconfig }), postcss()]
+  const plugins: Plugin[] = [
+    nodeResolve(),
+    commonjs(),
+    terser({ format: { comments: false } }),
+    typescript({ tsconfig }),
+    postcss(),
+  ]
 
   if (type === "vue") {
-    plugins.push(
-      vue({
-        template: {
-          compilerOptions: {
-            nodeTransforms: [
-              (node) => {
-                if (node.type === 1) {
-                  node.props = node.props.filter((prop) => prop.type !== 6 || prop.name !== "data-testid")
-                }
-              },
-            ],
-          },
-        },
-      }),
-    )
+    plugins.push(vue())
   }
 
   return plugins
@@ -94,6 +87,8 @@ export async function createRollupConfig({
   const pkgJson = await packageJson(root)
   const { name, formats = ["cjs", "esm"], type = "ts" } = pkgJson.buildOptions || {}
   const output: OutputOptions[] = []
+
+  console.log(type, "this is types")
 
   for (const format of formats) {
     const outputItem: OutputOptions = {
