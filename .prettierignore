@@ -4,3 +4,5 @@ public
 node_modules
 pnpm-lock.yaml
 release
+apps/web/src/typings/components.d.ts
+apps/web/src/router/elegant/*
