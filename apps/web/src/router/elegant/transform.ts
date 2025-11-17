@@ -4,8 +4,10 @@
 // Read more: https://github.com/soybeanjs/elegant-router
 
 import type { RouteRecordRaw, RouteComponent } from 'vue-router';
-import type { ElegantConstRoute } from "@elegant-router/vue"
-import type { RouteMap, RouteKey, RoutePath } from "@elegant-router/types"
+/* prettier-ignore */
+import type { ElegantConstRoute } from '@elegant-router/vue';
+/* prettier-ignore */
+import type { RouteMap, RouteKey, RoutePath } from '@elegant-router/types';
 
 /**
  * transform elegant const routes to vue routes
@@ -13,12 +15,13 @@ import type { RouteMap, RouteKey, RoutePath } from "@elegant-router/types"
  * @param layouts layout components
  * @param views view components
  */
+/* prettier-ignore */
 export function transformElegantRoutesToVueRoutes(
   routes: ElegantConstRoute[],
   layouts: Record<string, RouteComponent | (() => Promise<RouteComponent>)>,
-  views: Record<string, RouteComponent | (() => Promise<RouteComponent>)>,
+  views: Record<string, RouteComponent | (() => Promise<RouteComponent>)>
 ) {
-  return routes.flatMap((route) => transformElegantRouteToVueRoute(route, layouts, views))
+  return routes.flatMap(route => transformElegantRouteToVueRoute(route, layouts, views));
 }
 
 /**
@@ -159,33 +162,36 @@ function transformElegantRouteToVueRoute(
 /**
  * map of route name and route path
  */
+/* prettier-ignore */
 const routeMap: RouteMap = {
-  root: "/",
+  "root": "/",
   "not-found": "/:pathMatch(.*)*",
   "403": "/403",
   "404": "/404",
   "500": "/500",
-  home: "/home",
+  "home": "/home",
   "iframe-page": "/iframe-page/:url",
-  login: "/login/:module(pwd-login|code-login|register|reset-pwd|bind-wechat)?",
-}
+  "login": "/login/:module(pwd-login|code-login|register|reset-pwd|bind-wechat)?"
+};
 
 /**
  * get route path by route name
  * @param name route name
  */
+/* prettier-ignore */
 export function getRoutePath<T extends RouteKey>(name: T) {
-  return routeMap[name]
+  return routeMap[name];
 }
 
 /**
  * get route name by route path
  * @param path route path
  */
+/* prettier-ignore */
 export function getRouteName(path: RoutePath) {
-  const routeEntries = Object.entries(routeMap) as [RouteKey, RoutePath][]
+  const routeEntries = Object.entries(routeMap) as [RouteKey, RoutePath][];
 
-  const routeName: RouteKey | null = routeEntries.find(([, routePath]) => routePath === path)?.[0] || null
+  const routeName: RouteKey | null = routeEntries.find(([, routePath]) => routePath === path)?.[0] || null;
 
-  return routeName
+  return routeName;
 }
