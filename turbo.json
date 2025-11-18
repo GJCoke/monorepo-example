@@ -8,8 +8,11 @@
     "dev": {
       "persistent": true,
       "cache": false,
-      "dependsOn": ["^build"],
+      "dependsOn": ["^watch"],
       "outputs": []
+    },
+    "watch": {
+      "cache": false
     },
     "typecheck": {
       "cache": false,
