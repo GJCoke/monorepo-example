@@ -8,7 +8,6 @@
   "scripts": {
     "dev": "ts-node ../builder/cli.ts --dev",
     "build": "ts-node ../builder/cli.ts",
-    "watch": "echo watching...",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
