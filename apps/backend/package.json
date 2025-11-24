@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo-exmaple/backend",
+  "name": "@monorepo-example/backend",
   "version": "1.0.0",
   "scripts": {
     "lint:format": "./scripts/monorepo/ruff.sh",

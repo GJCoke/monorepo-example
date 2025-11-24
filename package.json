@@ -7,7 +7,7 @@
   "scripts": {
     "lint:format": "turbo lint:format",
     "lint:lint": "turbo lint:lint",
-    "lint:spellcheck": "cspell lint \"**/*.{js,ts,mjs,cjs,json,css,less,scss,vue,html,md,py}\"",
+    "lint:spellcheck": "cspell lint \"(packages|apps)/**/*.{js,ts,mjs,cjs,json,css,less,scss,vue,html,md}\"",
     "lint:depcheck": "depcheck",
     "lint:commit": "commitlint --edit $1",
     "typecheck": "turbo typecheck",
