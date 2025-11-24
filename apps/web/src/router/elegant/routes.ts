@@ -68,4 +68,52 @@ export const generatedRoutes: GeneratedRoute[] = [{
     constant: true,
     hideInMenu: true
   }
+}, {
+  name: 'manage',
+  path: '/manage',
+  component: 'layout.base',
+  meta: {
+    title: 'manage',
+    order: 9,
+    icon: 'carbon:cloud-service-management',
+    i18nKey: 'route.manage'
+  },
+  children: [{
+    name: 'manage_menu',
+    path: '/manage/menu',
+    component: 'view.manage_menu',
+    meta: {
+      title: 'manage_menu',
+      i18nKey: 'route.manage_menu',
+      icon: 'material-symbols:route',
+    }
+  }, {
+    name: 'manage_role',
+    path: '/manage/role',
+    component: 'view.manage_role',
+    meta: {
+      title: 'manage_role',
+      i18nKey: 'route.manage_role',
+      icon: 'carbon:user-role',
+    }
+  }, {
+    name: 'manage_user',
+    path: '/manage/user',
+    component: 'view.manage_user',
+    meta: {
+      icon: 'ic:round-manage-accounts',
+      title: 'manage_user',
+      i18nKey: 'route.manage_user'
+    }
+  }, {
+    name: 'manage_user-detail',
+    path: '/manage/user-detail/:id',
+    component: 'view.manage_user-detail',
+    props: true,
+    meta: {
+      title: 'manage_user-detail',
+      hideInMenu: true,
+      i18nKey: 'route.manage_user-detail'
+    }
+  }]
 }];

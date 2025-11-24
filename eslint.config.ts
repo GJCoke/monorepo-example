@@ -39,6 +39,7 @@ export default defineConfig(
       // 自定义规则
       "no-var": "error", // 禁止使用 var
       "no-empty": "off",
+      "no-undef": "off",
       eqeqeq: "error", // 必须使用 === / !==
       "prefer-const": "error", // 优先使用 const
       "@typescript-eslint/no-unused-vars": "off",
@@ -53,12 +54,10 @@ export default defineConfig(
       parser: vueParser,
       parserOptions: {
         parser: tsESLint.parser,
+        ecmaFeatures: { jsx: true },
       },
       globals: {
         ...globals.browser, // 添加浏览器全局变量
-        NaiveUI: "readonly",
-        App: "readonly",
-        UnionKey: "readonly",
       },
     },
     rules: {

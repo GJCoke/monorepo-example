@@ -1,5 +1,13 @@
 # @monorepo-example/web
 
+## 1.1.0
+
+### Minor Changes
+
+- ## add system manager package(user,role,menu)
+  - Completed the migration of the System Management module from Soybean Admin
+  - Updated and refined the project's ESLint configuration
+
 ## 1.0.1
 
 ### Patch Changes
