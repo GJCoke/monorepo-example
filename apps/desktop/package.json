@@ -1,10 +1,12 @@
 {
   "name": "@monorepo-example/desktop",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
+    "lint:format": "prettier --write \"**/*.{js,ts,mjs,cjs,json,tsx,css,less,scss,vue,html,md}\"",
+    "lint:lint": "eslint --flag unstable_native_nodejs_ts_config --fix",
     "dev": "vite",
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc --noEmit"

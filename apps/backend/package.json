@@ -1,0 +1,10 @@
+{
+  "name": "@monorepo-exmaple/backend",
+  "version": "1.0.0",
+  "scripts": {
+    "lint:format": "./scripts/monorepo/ruff.sh",
+    "lint:lint": "./scripts/monorepo/mypy.sh",
+    "dev": "./scripts/monorepo/run.sh",
+    "postinstall": "./scripts/monorepo/install.sh"
+  }
+}

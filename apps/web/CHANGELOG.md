@@ -1,5 +1,16 @@
 # @monorepo-example/web
 
+## 1.0.1
+
+### Patch Changes
+
+- Add `turbo` as the build and lint manager
+- Updated dependencies
+  - @monorepo-example/axios@1.0.1
+  - @monorepo-example/color@1.0.1
+  - @monorepo-example/hooks@1.0.1
+  - @monorepo-example/utils@1.0.1
+
 ## 1.0.0
 
 ### Major Changes

@@ -1,5 +1,5 @@
 {
-  "import": ["@cspell/dict-typescript/cspell-ext.json"],
+  "import": ["@cspell/dict-typescript/cspell-ext.json", "@cspell/dict-python/cspell-ext.json"],
   "caseSensitive": false,
   "words": ["mi", "pnpm", "vite", "monorepo", "eslint", "prettier", "commitlint", "tsx", "tsconfig", "unocss"],
 
@@ -13,6 +13,7 @@
     "**/static/**",
     "**/out/**",
     "**/vendor/**",
+    "**/.venv/**",
     "**/tmp/**",
     "**/*.d.ts",
     "**/package.json",
@@ -41,7 +42,7 @@
 
   "allowCompoundWords": true,
 
-  "dictionaries": ["custom-dictionary"],
+  "dictionaries": ["custom-dictionary", "python"],
   "dictionaryDefinitions": [
     {
       "name": "custom-dictionary",

@@ -1,11 +1,13 @@
 {
   "name": "@monorepo-example/alova",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "type": "module",
   "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
   "scripts": {
+    "lint:format": "prettier --write \"**/*.{js,ts,mjs,cjs,json,tsx,css,less,scss,vue,html,md}\"",
+    "lint:lint": "eslint --flag unstable_native_nodejs_ts_config --fix",
     "dev": "ts-node ../builder/cli.ts --dev",
     "build": "ts-node ../builder/cli.ts",
     "typecheck": "tsc --noEmit"

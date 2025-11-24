@@ -17,6 +17,18 @@
     "typecheck": {
       "cache": false,
       "dependsOn": ["^typecheck"]
+    },
+    "lint:format": {
+      "cache": false,
+      "dependsOn": ["^lint:format"]
+    },
+    "lint:lint": {
+      "cache": false,
+      "dependsOn": ["^lint:lint"]
+    },
+    "lint:spellcheck": {
+      "cache": false,
+      "dependsOn": ["^lint:spellcheck"]
     }
   }
 }

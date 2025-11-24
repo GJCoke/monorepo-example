@@ -1,9 +1,11 @@
 {
   "name": "@monorepo-example/web",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
+    "lint:format": "prettier --write \"**/*.{js,ts,mjs,cjs,json,tsx,css,less,scss,vue,html,md}\"",
+    "lint:lint": "eslint --flag unstable_native_nodejs_ts_config --fix",
     "dev": "vite --mode test",
     "build": "vite build --mode test",
     "typecheck": "vue-tsc --noEmit",
