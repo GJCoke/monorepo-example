@@ -356,6 +356,11 @@ type I18nFullKey =
 declare namespace I18n {
   type LangType = "en-US" | "zh-CN"
 
+  type LangOption = {
+    label: string
+    key: LangType
+  }
+
   type TranslateOptions<Locales extends string = LangType> = import("vue-i18n").TranslateOptions<Locales>
 
   interface $T {

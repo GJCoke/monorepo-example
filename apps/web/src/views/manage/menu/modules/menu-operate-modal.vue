@@ -222,7 +222,7 @@
 
   function handleUpdateI18nKeyByRouteName() {
     if (model.value.routeName) {
-      model.value.i18nKey = `route.${model.value.routeName}` as App.I18n.I18nKey
+      model.value.i18nKey = `route.${model.value.routeName}` as I18nFullKey
     } else {
       model.value.i18nKey = null
     }
@@ -415,7 +415,7 @@
               <template #action="{ index, create, remove }">
                 <NSpace class="ml-12px">
                   <NButton size="medium" @click="() => create(index)">
-                    <icon-ic:round-plus class="text-icon" />
+                    <icon-ic-round-plus class="text-icon" />
                   </NButton>
                   <NButton size="medium" @click="() => remove(index)">
                     <icon-ic-round-remove class="text-icon" />
@@ -443,7 +443,7 @@
               <template #action="{ index, create, remove }">
                 <NSpace class="ml-12px">
                   <NButton size="medium" @click="() => create(index)">
-                    <icon-ic:round-plus class="text-icon" />
+                    <icon-ic-round-plus class="text-icon" />
                   </NButton>
                   <NButton size="medium" @click="() => remove(index)">
                     <icon-ic-round-remove class="text-icon" />

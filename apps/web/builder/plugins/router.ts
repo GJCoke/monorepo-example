@@ -28,7 +28,7 @@ export function setupElegantRouter() {
 
       const meta: Partial<RouteMeta> = {
         title: key,
-        i18nKey: `route.${key}` as App.I18n.I18nKey,
+        i18nKey: `route.${key}` as I18nFullKey,
       }
 
       if (constantRoutes.includes(key)) {

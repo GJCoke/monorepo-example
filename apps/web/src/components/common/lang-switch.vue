@@ -8,9 +8,9 @@
 
   interface Props {
     /** Current language */
-    lang: App.I18n.LangType
+    lang: I18n.LangType
     /** Language options */
-    langOptions: App.I18n.LangOption[]
+    langOptions: I18n.LangOption[]
     /** Show tooltip */
     showTooltip?: boolean
   }
@@ -20,7 +20,7 @@
   })
 
   type Emits = {
-    (e: "changeLang", lang: App.I18n.LangType): void
+    (e: "changeLang", lang: I18n.LangType): void
   }
 
   const emit = defineEmits<Emits>()
@@ -43,7 +43,7 @@
     }))
   })
 
-  function changeLang(lang: App.I18n.LangType) {
+  function changeLang(lang: I18n.LangType) {
     emit("changeLang", lang)
   }
 </script>

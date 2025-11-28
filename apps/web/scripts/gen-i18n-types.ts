@@ -56,6 +56,10 @@ output += `type I18nFullKey =\n  ${namespaces.map((ns) => `| \`${ns}.\${I18nKeys
 
 output += `declare namespace I18n {\n`
 output += `  type LangType = ${langs.map((l) => `"${l}"`).join(" | ")}\n\n`
+output += `  type LangOption = {\n`
+output += `    label: string\n`
+output += `    key: LangType\n`
+output += `  }\n\n`
 output += `  type TranslateOptions<Locales extends string = LangType> = import("vue-i18n").TranslateOptions<Locales>\n\n`
 output += `  interface $T {\n`
 output += `    (key: I18nFullKey): string\n`

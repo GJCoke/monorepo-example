@@ -23,7 +23,7 @@
   const themeStore = useThemeStore()
 
   interface LoginModule {
-    label: App.I18n.I18nKey
+    label: I18nFullKey
     component: Component
   }
 

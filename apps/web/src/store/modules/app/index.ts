@@ -49,9 +49,9 @@ export const useAppStore = defineStore(SetupStoreId.App, () => {
     routeStore.resetRouteCache()
   }
 
-  const locale = ref<App.I18n.LangType>(localStg.get("lang") || "zh-CN")
+  const locale = ref<I18n.LangType>(localStg.get("lang") || "zh-CN")
 
-  const localeOptions: App.I18n.LangOption[] = [
+  const localeOptions: I18n.LangOption[] = [
     {
       label: "中文",
       key: "zh-CN",
@@ -62,7 +62,7 @@ export const useAppStore = defineStore(SetupStoreId.App, () => {
     },
   ]
 
-  function changeLocale(lang: App.I18n.LangType) {
+  function changeLocale(lang: I18n.LangType) {
     locale.value = lang
     setLocale(lang)
     localStg.set("lang", lang)
