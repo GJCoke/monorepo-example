@@ -1,6 +1,6 @@
 {
   "name": "@monorepo-example/backend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "lint:format": "./scripts/monorepo/ruff.sh",
     "lint:lint": "./scripts/monorepo/mypy.sh",

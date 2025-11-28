@@ -6,13 +6,13 @@ declare namespace Api {
    */
   namespace Auth {
     interface LoginToken {
-      token: string
+      accessToken: string
       refreshToken: string
     }
 
     interface UserInfo {
       userId: string
-      userName: string
+      name: string
       roles: string[]
       buttons: string[]
     }

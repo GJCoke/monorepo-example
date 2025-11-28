@@ -1,9 +1,19 @@
-import zhCN from "./langs/zh-cn"
-import enUS from "./langs/en-us"
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export async function loadLocaleMessages() {
+  const modules = import.meta.glob("./langs/**/*.json", {
+    eager: true,
+  })
+  const messages: Record<string, any> = {}
 
-const locales: Record<App.I18n.LangType, App.I18n.Schema> = {
-  "zh-CN": zhCN,
-  "en-US": enUS,
+  for (const path in modules) {
+    const match = path.match(/langs\/(.+?)\/(.+?)\.json$/)
+    if (!match) continue
+
+    const [_, locale, fileName] = match
+
+    messages[locale] ??= {}
+    messages[locale][fileName] = (modules[path] as any).default
+  }
+
+  return messages
 }
-
-export default locales

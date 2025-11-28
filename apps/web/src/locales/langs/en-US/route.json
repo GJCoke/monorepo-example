@@ -1,0 +1,13 @@
+{
+  "login": "Login",
+  "403": "No Permission",
+  "404": "Page Not Found",
+  "500": "Server Error",
+  "iframe-page": "Iframe",
+  "home": "Home",
+  "manage": "System Manage",
+  "manage_user": "User Manage",
+  "manage_user-detail": "User Detail",
+  "manage_role": "Role Manage",
+  "manage_menu": "Menu Manage"
+}

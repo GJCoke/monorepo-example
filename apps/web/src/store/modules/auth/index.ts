@@ -2,7 +2,8 @@ import { computed, reactive, ref } from "vue"
 import { useRoute } from "vue-router"
 import { defineStore } from "pinia"
 import { useLoading } from "@monorepo-example/hooks"
-import { fetchGetUserInfo, fetchLogin } from "@/service/api"
+import JSEncrypt from "jsencrypt"
+import { fetchGetPublicKey, fetchGetUserInfo, fetchLogin } from "@/service/api"
 import { useRouterPush } from "@/hooks/common/router"
 import { localStg } from "@/utils/storage"
 import { SetupStoreId } from "@/enum"
@@ -23,7 +24,7 @@ export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
 
   const userInfo: Api.Auth.UserInfo = reactive({
     userId: "",
-    userName: "",
+    name: "",
     roles: [],
     buttons: [],
   })
@@ -92,14 +93,18 @@ export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
   /**
    * Login
    *
-   * @param userName User name
+   * @param username User name
    * @param password Password
    * @param [redirect=true] Whether to redirect after login. Default is `true`
    */
-  async function login(userName: string, password: string, redirect = true) {
+  async function login(username: string, password: string, redirect = true) {
     startLoading()
 
-    const { data: loginToken, error } = await fetchLogin(userName, password)
+    const { data: publicKey } = await fetchGetPublicKey()
+
+    const encryptor = new JSEncrypt()
+    encryptor.setPublicKey(publicKey!)
+    const { data: loginToken, error } = await fetchLogin(username, encryptor.encrypt(password) || password)
 
     if (!error) {
       const pass = await loginByToken(loginToken)
@@ -117,7 +122,7 @@ export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
 
         window.$notification?.success({
           title: $t("page.login.common.loginSuccess"),
-          content: $t("page.login.common.welcomeBack", { userName: userInfo.userName }),
+          content: $t("page.login.common.welcomeBack", { name: userInfo.name }),
           duration: 4500,
         })
       }
@@ -130,14 +135,14 @@ export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
 
   async function loginByToken(loginToken: Api.Auth.LoginToken) {
     // 1. stored in the localStorage, the later requests need it in headers
-    localStg.set("token", loginToken.token)
+    localStg.set("token", loginToken.accessToken)
     localStg.set("refreshToken", loginToken.refreshToken)
 
     // 2. get user info
     const pass = await getUserInfo()
 
     if (pass) {
-      token.value = loginToken.token
+      token.value = loginToken.accessToken
 
       return true
     }

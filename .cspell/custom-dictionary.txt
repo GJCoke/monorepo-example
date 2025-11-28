@@ -168,3 +168,5 @@ PKCS
 Oittaa
 ASGI
 dotenv
+jsencrypt
+encryptor

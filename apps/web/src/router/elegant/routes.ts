@@ -85,7 +85,7 @@ export const generatedRoutes: GeneratedRoute[] = [{
     meta: {
       title: 'manage_menu',
       i18nKey: 'route.manage_menu',
-      icon: 'material-symbols:route',
+      icon: 'material-symbols:route'
     }
   }, {
     name: 'manage_role',
@@ -94,7 +94,7 @@ export const generatedRoutes: GeneratedRoute[] = [{
     meta: {
       title: 'manage_role',
       i18nKey: 'route.manage_role',
-      icon: 'carbon:user-role',
+      icon: 'carbon:user-role'
     }
   }, {
     name: 'manage_user',

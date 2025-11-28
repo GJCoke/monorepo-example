@@ -1,5 +1,13 @@
 # @monorepo-example/web
 
+## 1.2.0
+
+### Minor Changes
+
+- - Modularized the i18n files and added a Vite plugin to automatically generate i18n type declarations.
+  - Switched some Apifox Mock APIs to local mode.
+  - Applied RSA encryption to user passwords.
+
 ## 1.1.0
 
 ### Minor Changes
