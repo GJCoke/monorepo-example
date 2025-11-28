@@ -142,3 +142,10 @@ Changesets 会读取所有未发布的 .changeset 文件
 根据其中标记的 major / minor / patch 决定下一个版本
 
 支持多个 package 的 monorepo，自动计算每个 package 的下一个版本
+
+## i18n
+
+使用 `WebStrom` 可使用 `Easy I18n` 插件 vscode 可使用 `i18n Ally`
+
+- 以下为配置示例
+  ![easy-i18n.png](docs/images/easy-i18n.png)

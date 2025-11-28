@@ -15,7 +15,8 @@
     "prepare": "husky",
     "precommit": "lint-staged",
     "dev:web": "turbo build --filter !@monorepo-example/web && turbo watch dev --filter @monorepo-example/web",
-    "dev:desktop": "turbo build --filter !@monorepo-example/desktop && turbo watch dev --filter @monorepo-example/desktop"
+    "dev:desktop": "turbo build --filter !@monorepo-example/desktop && turbo watch dev --filter @monorepo-example/desktop",
+    "dev:backend": "turbo dev --filter @monorepo-example/backend"
   },
   "config": {
     "commitizen": {
