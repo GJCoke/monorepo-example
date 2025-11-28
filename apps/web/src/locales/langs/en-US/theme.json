@@ -1,152 +1,47 @@
 {
-  "themeDrawerTitle": "Theme Configuration",
-  "tabs": {
-    "appearance": "Appearance",
-    "layout": "Layout",
-    "general": "General",
-    "preset": "Preset"
-  },
   "appearance": {
-    "themeSchema": {
-      "title": "Theme Schema",
-      "light": "Light",
-      "dark": "Dark",
-      "auto": "Follow System"
-    },
-    "grayscale": "Grayscale",
     "colourWeakness": "Colour Weakness",
+    "grayscale": "Grayscale",
+    "preset": {
+      "apply": "Apply",
+      "applySuccess": "Preset applied successfully",
+      "azir": {
+        "desc": "It is a cold and elegant preset that Azir likes",
+        "name": "Azir's Preset"
+      },
+      "compact": {
+        "desc": "Compact layout preset for small screens",
+        "name": "Compact Preset"
+      },
+      "dark": {
+        "desc": "Dark theme preset for night time usage",
+        "name": "Dark Preset"
+      },
+      "default": {
+        "desc": "Default theme preset with balanced settings",
+        "name": "Default Preset"
+      },
+      "title": "Theme Presets"
+    },
+    "recommendColor": "Apply Recommended Color Algorithm",
+    "recommendColorDesc": "The recommended color algorithm refers to",
     "themeColor": {
-      "title": "Theme Color",
-      "primary": "Primary",
-      "info": "Info",
-      "success": "Success",
-      "warning": "Warning",
       "error": "Error",
-      "followPrimary": "Follow Primary"
+      "followPrimary": "Follow Primary",
+      "info": "Info",
+      "primary": "Primary",
+      "success": "Success",
+      "title": "Theme Color",
+      "warning": "Warning"
     },
     "themeRadius": {
       "title": "Theme Radius"
     },
-    "recommendColor": "Apply Recommended Color Algorithm",
-    "recommendColorDesc": "The recommended color algorithm refers to",
-    "preset": {
-      "title": "Theme Presets",
-      "apply": "Apply",
-      "applySuccess": "Preset applied successfully",
-      "default": {
-        "name": "Default Preset",
-        "desc": "Default theme preset with balanced settings"
-      },
-      "dark": {
-        "name": "Dark Preset",
-        "desc": "Dark theme preset for night time usage"
-      },
-      "compact": {
-        "name": "Compact Preset",
-        "desc": "Compact layout preset for small screens"
-      },
-      "azir": {
-        "name": "Azir's Preset",
-        "desc": "It is a cold and elegant preset that Azir likes"
-      }
-    }
-  },
-  "layout": {
-    "layoutMode": {
-      "title": "Layout Mode",
-      "vertical": "Vertical Mode",
-      "horizontal": "Horizontal Mode",
-      "vertical-mix": "Vertical Mix Mode",
-      "vertical-hybrid-header-first": "Left Hybrid Header-First",
-      "top-hybrid-sidebar-first": "Top-Hybrid Sidebar-First",
-      "top-hybrid-header-first": "Top-Hybrid Header-First",
-      "vertical_detail": "Vertical menu layout, with the menu on the left and content on the right.",
-      "vertical-mix_detail": "Vertical mix-menu layout, with the primary menu on the dark left side and the secondary menu on the lighter left side.",
-      "vertical-hybrid-header-first_detail": "Left hybrid layout, with the primary menu at the top, the secondary menu on the dark left side, and the tertiary menu on the lighter left side.",
-      "horizontal_detail": "Horizontal menu layout, with the menu at the top and content below.",
-      "top-hybrid-sidebar-first_detail": "Top hybrid layout, with the primary menu on the left and the secondary menu at the top.",
-      "top-hybrid-header-first_detail": "Top hybrid layout, with the primary menu at the top and the secondary menu on the left."
-    },
-    "tab": {
-      "title": "Tab Settings",
-      "visible": "Tab Visible",
-      "cache": "Tag Bar Info Cache",
-      "cacheTip": "One-click to open/close global keepalive",
-      "height": "Tab Height",
-      "mode": {
-        "title": "Tab Mode",
-        "slider": "Slider",
-        "chrome": "Chrome",
-        "button": "Button"
-      },
-      "closeByMiddleClick": "Close Tab by Middle Click",
-      "closeByMiddleClickTip": "Enable closing tabs by clicking with the middle mouse button"
-    },
-    "header": {
-      "title": "Header Settings",
-      "height": "Header Height",
-      "breadcrumb": {
-        "visible": "Breadcrumb Visible",
-        "showIcon": "Breadcrumb Icon Visible"
-      }
-    },
-    "sider": {
-      "title": "Sider Settings",
-      "inverted": "Dark Sider",
-      "width": "Sider Width",
-      "collapsedWidth": "Sider Collapsed Width",
-      "mixWidth": "Mix Sider Width",
-      "mixCollapsedWidth": "Mix Sider Collapse Width",
-      "mixChildMenuWidth": "Mix Child Menu Width"
-    },
-    "footer": {
-      "title": "Footer Settings",
-      "visible": "Footer Visible",
-      "fixed": "Fixed Footer",
-      "height": "Footer Height",
-      "right": "Right Footer"
-    },
-    "content": {
-      "title": "Content Area Settings",
-      "scrollMode": {
-        "title": "Scroll Mode",
-        "tip": "The theme scroll only scrolls the main part, the outer scroll can carry the header and footer together",
-        "wrapper": "Wrapper",
-        "content": "Content"
-      },
-      "page": {
-        "animate": "Page Animate",
-        "mode": {
-          "title": "Page Animate Mode",
-          "fade": "Fade",
-          "fade-slide": "Slide",
-          "fade-bottom": "Fade Zoom",
-          "fade-scale": "Fade Scale",
-          "zoom-fade": "Zoom Fade",
-          "zoom-out": "Zoom Out",
-          "none": "None"
-        }
-      },
-      "fixedHeaderAndTab": "Fixed Header And Tab"
-    }
-  },
-  "general": {
-    "title": "General Settings",
-    "watermark": {
-      "title": "Watermark Settings",
-      "visible": "Watermark Full Screen Visible",
-      "text": "Custom Watermark Text",
-      "enableUserName": "Enable User Name Watermark",
-      "enableTime": "Show Current Time",
-      "timeFormat": "Time Format"
-    },
-    "multilingual": {
-      "title": "Multilingual Settings",
-      "visible": "Display multilingual button"
-    },
-    "globalSearch": {
-      "title": "Global Search Settings",
-      "visible": "Display GlobalSearch button"
+    "themeSchema": {
+      "auto": "Follow System",
+      "dark": "Dark",
+      "light": "Light",
+      "title": "Theme Schema"
     }
   },
   "configOperation": {
@@ -154,5 +49,110 @@
     "copySuccessMsg": "Copy Success, Please replace the variable \"themeSettings\" in \"src/theme/settings.ts\"",
     "resetConfig": "Reset Config",
     "resetSuccessMsg": "Reset Success"
-  }
+  },
+  "general": {
+    "globalSearch": {
+      "title": "Global Search Settings",
+      "visible": "Display GlobalSearch button"
+    },
+    "multilingual": {
+      "title": "Multilingual Settings",
+      "visible": "Display multilingual button"
+    },
+    "title": "General Settings",
+    "watermark": {
+      "enableTime": "Show Current Time",
+      "enableUserName": "Enable User Name Watermark",
+      "text": "Custom Watermark Text",
+      "timeFormat": "Time Format",
+      "title": "Watermark Settings",
+      "visible": "Watermark Full Screen Visible"
+    }
+  },
+  "layout": {
+    "content": {
+      "fixedHeaderAndTab": "Fixed Header And Tab",
+      "page": {
+        "animate": "Page Animate",
+        "mode": {
+          "fade": "Fade",
+          "fade-bottom": "Fade Zoom",
+          "fade-scale": "Fade Scale",
+          "fade-slide": "Slide",
+          "none": "None",
+          "title": "Page Animate Mode",
+          "zoom-fade": "Zoom Fade",
+          "zoom-out": "Zoom Out"
+        }
+      },
+      "scrollMode": {
+        "content": "Content",
+        "tip": "The theme scroll only scrolls the main part, the outer scroll can carry the header and footer together",
+        "title": "Scroll Mode",
+        "wrapper": "Wrapper"
+      },
+      "title": "Content Area Settings"
+    },
+    "footer": {
+      "fixed": "Fixed Footer",
+      "height": "Footer Height",
+      "right": "Right Footer",
+      "title": "Footer Settings",
+      "visible": "Footer Visible"
+    },
+    "header": {
+      "breadcrumb": {
+        "showIcon": "Breadcrumb Icon Visible",
+        "visible": "Breadcrumb Visible"
+      },
+      "height": "Header Height",
+      "title": "Header Settings"
+    },
+    "layoutMode": {
+      "horizontal": "Horizontal Mode",
+      "horizontal_detail": "Horizontal menu layout, with the menu at the top and content below.",
+      "title": "Layout Mode",
+      "top-hybrid-header-first": "Top-Hybrid Header-First",
+      "top-hybrid-header-first_detail": "Top hybrid layout, with the primary menu at the top and the secondary menu on the left.",
+      "top-hybrid-sidebar-first": "Top-Hybrid Sidebar-First",
+      "top-hybrid-sidebar-first_detail": "Top hybrid layout, with the primary menu on the left and the secondary menu at the top.",
+      "vertical": "Vertical Mode",
+      "vertical-hybrid-header-first": "Left Hybrid Header-First",
+      "vertical-hybrid-header-first_detail": "Left hybrid layout, with the primary menu at the top, the secondary menu on the dark left side, and the tertiary menu on the lighter left side.",
+      "vertical-mix": "Vertical Mix Mode",
+      "vertical-mix_detail": "Vertical mix-menu layout, with the primary menu on the dark left side and the secondary menu on the lighter left side.",
+      "vertical_detail": "Vertical menu layout, with the menu on the left and content on the right."
+    },
+    "sider": {
+      "collapsedWidth": "Sider Collapsed Width",
+      "inverted": "Dark Sider",
+      "mixChildMenuWidth": "Mix Child Menu Width",
+      "mixCollapsedWidth": "Mix Sider Collapse Width",
+      "mixWidth": "Mix Sider Width",
+      "title": "Sider Settings",
+      "width": "Sider Width"
+    },
+    "tab": {
+      "cache": "Tag Bar Info Cache",
+      "cacheTip": "One-click to open/close global keepalive",
+      "closeByMiddleClick": "Close Tab by Middle Click",
+      "closeByMiddleClickTip": "Enable closing tabs by clicking with the middle mouse button",
+      "height": "Tab Height",
+      "mode": {
+        "button": "Button",
+        "chrome": "Chrome",
+        "slider": "Slider",
+        "title": "Tab Mode"
+      },
+      "title": "Tab Settings",
+      "visible": "Tab Visible"
+    }
+  },
+  "tabs": {
+    "appearance": "Appearance",
+    "general": "General",
+    "layout": "Layout",
+    "preset": "Preset"
+  },
+  "themeDrawerTitle": "Theme Configuration"
 }

@@ -1,7 +1,7 @@
 {
+  "closeAll": "Close All",
   "closeCurrent": "Close Current",
-  "closeOther": "Close Other",
   "closeLeft": "Close Left",
-  "closeRight": "Close Right",
-  "closeAll": "Close All"
+  "closeOther": "Close Other",
+  "closeRight": "Close Right"
 }

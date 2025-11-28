@@ -5,18 +5,17 @@
   "backToHome": "Back to home",
   "batchDelete": "Batch Delete",
   "cancel": "Cancel",
-  "close": "Close",
   "check": "Check",
-  "expandColumn": "Expand Column",
+  "close": "Close",
   "columnSetting": "Column Setting",
   "config": "Config",
   "confirm": "Confirm",
+  "confirmDelete": "Are you sure you want to delete?",
   "delete": "Delete",
   "deleteSuccess": "Delete Success",
-  "confirmDelete": "Are you sure you want to delete?",
   "edit": "Edit",
-  "warning": "Warning",
   "error": "Error",
+  "expandColumn": "Expand Column",
   "index": "Index",
   "keywordSearch": "Please enter keyword",
   "logout": "Logout",
@@ -36,8 +35,9 @@
   "update": "Update",
   "updateSuccess": "Update Success",
   "userCenter": "User Center",
+  "warning": "Warning",
   "yesOrNo": {
-    "yes": "Yes",
-    "no": "No"
+    "no": "No",
+    "yes": "Yes"
   }
 }
